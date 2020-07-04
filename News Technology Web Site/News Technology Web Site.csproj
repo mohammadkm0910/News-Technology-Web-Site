@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Array\Class1.cs" />
     <Compile Include="Array\TableData.cs" />
     <Compile Include="Array\TableGS.cs" />
     <Compile Include="Controllers\HomeController.cs" />
