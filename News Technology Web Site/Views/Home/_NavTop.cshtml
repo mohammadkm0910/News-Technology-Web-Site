@@ -1,0 +1,37 @@
+﻿<nav class="nav-top">
+    <div class="drawer" onclick="myDrawer(this)">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <a href="/Home/Index" class="logo">شهر فناوری</a>
+    <label class="night">
+        <input type="checkbox">
+        <span class="toggle">
+            <i class="fa fa-sun-o dy"></i>
+            <i class="fa fa-moon-o nt"></i>
+        </span>
+    </label>
+    <a href="/Home/Register" class="register">
+        <i class="fa fa-user-circle"></i>
+    </a>
+    <ul id="expandedDrawer">
+        <li>
+            <a class="expanded">@ViewBag.menu[0]</a>
+            <div class="dropdown-content">
+                <a href="#">@ViewBag.menu[1]</a>
+            </div>
+        </li>
+        <li>
+            <a class="expanded">@ViewBag.menu[2]</a>
+            <div class="dropdown-content">
+                <a href="#">@ViewBag.menu[3]</a>
+                <a href="#">@ViewBag.menu[4]</a>
+                <a href="#">@ViewBag.menu[5]</a>
+                <a href="#">@ViewBag.menu[6]</a>
+            </div>
+        </li>
+        <li><a href="#">کسب و کار</a></li>
+        <li><a href="#">دانش</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "احراز هویت";
+    Layout = "~/Views/Shared/_Title.cshtml";
+}
+
+<div class="tabs">
+    <button class="ripple" onclick="onTabs('reg')">ثبت نام</button>
+    <button class="ripple" onclick="onTabs('logIn')">ورود</button>
+</div>
+<form class="forms" id="reg" style="display: none;" action="#">
+    <h1>ثبت نام</h1>
+    <p>لطفا برای ایجاد یک حساب کاربری این فرم را پر کنید.</p>
+    <div class="group">
+        <input type="text" name="name" id="name" class="inputText" required>
+        <label for="name" class="hint">نام کاربری</label>
+    </div>
+    <div class="group">
+        <input type="text" name="email" id="email" class="inputText" required>
+        <label for="email" class="hint">ایمیل</label>
+    </div>
+    <div class="group">
+        <input type="password" name="password" id="password" class="inputText" required>
+        <label for="password" class="hint">پسورد</label>
+    </div>
+    <div class="group">
+        <input type="password" name="setPassword" id="setPassword" class="inputText" required>
+        <label for="setPassword" class="hint">تایید پسورد</label>
+    </div>
+    <div class="group">
+        <label>جنسیت</label>
+        <label class="radio">
+            زن:
+            <input type="radio" name="gender">
+            <span class="radio-mark"></span>
+        </label>
+        <label class="radio">
+            مرد:
+            <input type="radio" name="gender">
+            <span class="radio-mark"></span>
+        </label>
+    </div>
+    <div class="group">
+        <label class="check italic">
+            با <a href="#"> قوانین </a>این وب سایت موافقت می کنید.
+            <input type="checkbox" name="pandect" id="pandect">
+            <span class="check-mark"></span>
+        </label>
+    </div>
+    <div class="group">
+        <textarea placeholder="نحوه ی آشنایی با سایت"></textarea>
+    </div>
+    <div class="group">
+        <label for="confirmation">تایید اطلاعات</label>
+        <input type="submit" name="confirmation" id="confirmation" value="ثبت نام">
+    </div>
+</form>
+<form class="forms" id="logIn" action="#">
+    <h1>ورود</h1>
+    <p>لطفا اطلاعات خود را وارد کنید.</p>
+    <div class="group">
+        <input type="text" name="nameUser" id="nameUser" class="inputText" required>
+        <label for="nameUser" class="hint">نام کاربری</label>
+    </div>
+    <div class="group hint">
+        <input type="password" name="passwordUser" id="passwordUser" class="inputText" required>
+        <label for="passwordUser" class="hint">پسورد</label>
+    </div>
+    <div class="group">
+        <label class="check">
+            مرا به یاد داشته باش
+            <input type="checkbox" name="holder" id="holder">
+            <span class="check-mark"></span>
+        </label>
+    </div>
+    <div class="group">
+        <label for="logIns">ورود</label>
+        <input type="submit" name="logIn" id="logIns" value="ورود کاربر">
+    </div>
+</form>
+
