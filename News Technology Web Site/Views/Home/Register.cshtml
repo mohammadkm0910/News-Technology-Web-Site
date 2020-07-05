@@ -6,47 +6,47 @@
     <button class="ripple" onclick="onTabs('reg')">ثبت نام</button>
     <button class="ripple" onclick="onTabs('logIn')">ورود</button>
 </div>
-<form class="forms" id="reg" style="display: none;" action="#">
+<form class="forms" id="reg" style="display: none;" action="/Home/Register" method="post">
     <h1>ثبت نام</h1>
     <p>لطفا برای ایجاد یک حساب کاربری این فرم را پر کنید.</p>
     <div class="group">
-        <input type="text" name="name" id="name" class="inputText" required>
-        <label for="name" class="hint">نام کاربری</label>
+        <input type="text" name="NameUser" id="NameUser" class="inputText" required>
+        <label for="NameUser" class="hint">نام کاربری</label>
     </div>
     <div class="group">
-        <input type="text" name="email" id="email" class="inputText" required>
-        <label for="email" class="hint">ایمیل</label>
+        <input type="text" name="Email" id="Email" class="inputText" required>
+        <label for="Email" class="hint">ایمیل</label>
     </div>
     <div class="group">
-        <input type="password" name="password" id="password" class="inputText" required>
-        <label for="password" class="hint">پسورد</label>
+        <input type="password" name="Password" id="Password" class="inputText" required>
+        <label for="Password" class="hint">پسورد</label>
     </div>
     <div class="group">
-        <input type="password" name="setPassword" id="setPassword" class="inputText" required>
-        <label for="setPassword" class="hint">تایید پسورد</label>
+        <input type="Password" name="Password" id="Password" class="inputText" required>
+        <label for="Password" class="hint">تایید پسورد</label>
     </div>
     <div class="group">
         <label>جنسیت</label>
         <label class="radio">
             زن:
-            <input type="radio" name="gender">
+            <input type="radio" name="Gender" value="زن">
             <span class="radio-mark"></span>
         </label>
         <label class="radio">
             مرد:
-            <input type="radio" name="gender">
+            <input type="radio" name="Gender" value="مرد">
             <span class="radio-mark"></span>
         </label>
     </div>
     <div class="group">
         <label class="check italic">
             با <a href="#"> قوانین </a>این وب سایت موافقت می کنید.
-            <input type="checkbox" name="pandect" id="pandect">
+            <input type="checkbox" name="Agreement" id="Agreement">
             <span class="check-mark"></span>
         </label>
     </div>
     <div class="group">
-        <textarea placeholder="نحوه ی آشنایی با سایت"></textarea>
+        <textarea placeholder="نحوه ی آشنایی با سایت" name="Description"></textarea>
     </div>
     <div class="group">
         <label for="confirmation">تایید اطلاعات</label>
@@ -76,4 +76,18 @@
         <input type="submit" name="logIn" id="logIns" value="ورود کاربر">
     </div>
 </form>
+<div id="toast">
+    <p>@ViewBag.msg</p>
+</div>
+@if (ViewBag.notError == true)
+{
+    <script src="~/Design/js/toast.js"></script>
+}
+else
+{
+    if (ViewBag.showError == true)
+    {
+        <script src="~/Design/js/toast.js"></script>
+    }
+}
 

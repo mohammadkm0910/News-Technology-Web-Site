@@ -1,4 +1,5 @@
 ﻿using News_Technology_Web_Site.Array;
+using News_Technology_Web_Site.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +11,34 @@ namespace News_Technology_Web_Site.Controllers
 {
     public class HomeController : Controller
     {
+        AccountsEntities myDb = new AccountsEntities();
         public ActionResult Index()
         {
             return View();
         }
         public ActionResult Register()
         {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Register(User user)
+        {
+            try
+            {
+                myDb.Users.Add(user);
+                myDb.SaveChanges();
+                ViewBag.notError = true;
+                ViewBag.showError = false;
+                ViewBag.msg = "ثبت نام شما با موفقیت انجام شد.";
+                
+            }
+            catch (Exception)
+            {
+                ViewBag.notError = false;
+                ViewBag.showError = true;
+                ViewBag.msg = "مشکلی در ثبت نام پیش آمد.";
+            }
+           
             return View();
         }
         public ActionResult Bril()

@@ -32,6 +32,15 @@
         opacity: 1;
     }
 }
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
 
 @keyframes freshBackground {
     0% {
@@ -50,7 +59,6 @@
         background-image: linear-gradient(to top, #CE93D8 0%, #AB47BC 100%);
     }
 }
-
 
 /*rest css{*/
 
@@ -74,7 +82,31 @@ ul {
 
 
 /*nav menu*/
-
+#toast {
+    height: auto;
+    min-height: 50px;
+    width: 70%;
+    background-color: #2979FF;
+    position: absolute;
+    display: flex;
+    visibility: hidden;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 2px 2px 20px 10px rgba(0,0,0,0.4);
+    color: snow;
+}
+#toast.show {
+    animation: fadeIn 5s, fadeOut 10s;
+    visibility: visible;
+}
+.toast p {
+    width: calc(100% - 30px);
+    font-size: 12px;
+}
 .search {
     width: 100%;
     height: 50px;

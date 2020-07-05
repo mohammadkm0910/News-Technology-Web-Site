@@ -96,10 +96,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Accounts.mdf" />
+    <Content Include="App_Data\Accounts_log.ldf">
+      <DependentUpon>Accounts.mdf</DependentUpon>
+    </Content>
     <Content Include="clips\dt.mp4" />
     <Content Include="Design\css\pictures\ic_search.svg" />
     <Content Include="Design\css\style.css" />
     <Content Include="Design\fonts\vazir.svg" />
+    <Content Include="Design\js\toast.js" />
     <Content Include="Global.asax" />
     <Content Include="Design\icons\font-awesome.min.css" />
     <Content Include="Design\js\jquery.min.js" />
@@ -158,6 +163,16 @@
     <Content Include="imgs\tutorials\dw6.jpg" />
     <Content Include="imgs\tutorials\gs.jpg" />
     <Content Include="imgs\tutorials\gs2.jpg" />
+    <Content Include="Models\AccountUsers.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AccountUsers.edmx</DependentUpon>
+      <LastGenOutput>AccountUsers.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AccountUsers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AccountUsers.edmx</DependentUpon>
+      <LastGenOutput>AccountUsers.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +183,24 @@
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountUsers.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountUsers.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountUsers.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountUsers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountUsers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountUsers.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>AccountUsers.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -183,6 +216,13 @@
     <Content Include="Design\icons\fontawesome-webfont.woff" />
     <Content Include="Design\icons\fontawesome-webfont.woff2" />
     <Content Include="Design\icons\FontAwesome.otf" />
+    <EntityDeploy Include="Models\AccountUsers.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AccountUsers.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AccountUsers.edmx.diagram">
+      <DependentUpon>AccountUsers.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="Views\Shared\_Title.cshtml" />
     <Content Include="Views\Home\_SearchBar.cshtml" />
@@ -210,10 +250,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
