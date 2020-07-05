@@ -24,3 +24,20 @@ function onTabs(tabs) {
     }
     document.getElementById(tabs).style.display = "block";
 }
+$("#search").click(function () {
+    clearSearch();
+    let text = $("#text").val();
+    let regExp = new RegExp(text, "g");
+    $("p").each(function () {
+        let html = $(this).html();
+        let newHtml = html.replace(regExp, "<i style='background:yellow;color:black;font-style:normal'>" + text + "</i>");
+        $(this).html(newHtml);
+    });
+});
+function clearSearch() {
+    $("p").each(function () {
+        $(this).find("i").each(function () {
+            $(this).replaceWith($(this).html());
+        });
+    });
+}

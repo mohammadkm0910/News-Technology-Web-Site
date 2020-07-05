@@ -7,12 +7,11 @@
     <link href="~/Design/css/style.css" rel="stylesheet" />
     <link href="~/Design/icons/font-awesome.min.css" rel="stylesheet" />
     <script src="~/Design/js/jquery.min.js"></script>
-    <script></script>
 </head>
 <body>
     @Html.Action("SearchBar", "Home")
     @Html.Action("NavTop", "Home")
-    <div>
+    <div id="main">
         @RenderBody()
     </div>
     @RenderSection("Comments", false)
