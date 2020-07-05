@@ -120,8 +120,10 @@
     <Content Include="imgs\post3.jpg" />
     <Content Include="imgs\post4.jpg" />
     <Content Include="imgs\posts\brill.jpg" />
+    <Content Include="imgs\posts\IMBSFRT.jpg" />
     <Content Include="imgs\posts\ISS.jpg" />
     <Content Include="imgs\posts\ISS2.jpg" />
+    <Content Include="imgs\posts\reinstall windows 10.jpg" />
     <Content Include="imgs\posts\robot.jpg" />
     <Content Include="imgs\posts\robot2.jpg" />
     <Content Include="imgs\posts\robot3.jpg" />
@@ -131,6 +133,7 @@
     <Content Include="imgs\posts\self3.jpg" />
     <Content Include="imgs\posts\submarine.jpg" />
     <Content Include="imgs\posts\submarine2.jpg" />
+    <Content Include="imgs\posts\windows-security.jpg" />
     <Content Include="imgs\tutorials\dt.jpg" />
     <Content Include="imgs\tutorials\dt2.jpg" />
     <Content Include="imgs\tutorials\dt3.jpg" />
@@ -162,6 +165,7 @@
     <Compile Include="Array\TableData.cs" />
     <Compile Include="Array\TableGS.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -197,6 +201,8 @@
     <Content Include="Views\Home\DownloadWeb.cshtml" />
     <Content Include="Views\Home\GmailShortcuts.cshtml" />
     <Content Include="Views\Home\VirtualDesktopWindows10.cshtml" />
+    <Content Include="Views\Post\IBMstoppedFaceRecognitionTechnology.cshtml" />
+    <Content Include="Views\Post\MicrosoftRemoveWindows10FreshStart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
