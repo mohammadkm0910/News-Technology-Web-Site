@@ -2,6 +2,9 @@
     ViewBag.Title = "احراز هویت";
     Layout = "~/Views/Shared/_Title.cshtml";
 }
+<div class="msg-content">
+    @ViewBag.msg
+</div>
 <div class="tabs">
     <button class="ripple" onclick="onTabs('reg')">ثبت نام</button>
     <button class="ripple" onclick="onTabs('logIn')">ورود</button>
@@ -14,7 +17,7 @@
         <label for="NameUser" class="hint">نام کاربری</label>
     </div>
     <div class="group">
-        <input type="text" name="Email" id="Email" class="inputText" required>
+        <input type="email" name="Email" id="Email" class="inputText" required>
         <label for="Email" class="hint">ایمیل</label>
     </div>
     <div class="group">
@@ -22,7 +25,7 @@
         <label for="Password" class="hint">پسورد</label>
     </div>
     <div class="group">
-        <input type="Password" name="Password" id="Password" class="inputText" required>
+        <input type="Password" name="Password" id="Password" class="inputText"  required>
         <label for="Password" class="hint">تایید پسورد</label>
     </div>
     <div class="group">
@@ -76,18 +79,17 @@
         <input type="submit" name="logIn" id="logIns" value="ورود کاربر">
     </div>
 </form>
-<div id="toast">
-    <p>@ViewBag.msg</p>
-</div>
-@if (ViewBag.notError == true)
+@switch (ViewBag.notError)
 {
-    <script src="~/Design/js/toast.js"></script>
-}
-else
-{
-    if (ViewBag.showError == true)
-    {
-        <script src="~/Design/js/toast.js"></script>
-    }
+    case true:
+        <script>
+            $(".msg-content").css("color", "#42a71a");
+        </script>
+        break;
+    case false:
+        <script>
+            $(".msg-content").css("color", "red");
+        </script>
+        break;
 }
 

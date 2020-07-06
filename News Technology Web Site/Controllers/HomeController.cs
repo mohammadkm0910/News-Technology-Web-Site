@@ -18,6 +18,7 @@ namespace News_Technology_Web_Site.Controllers
         }
         public ActionResult Register()
         {
+            ViewBag.msg = "خوش آمدید.";
             return View();
         }
         [HttpPost]
@@ -28,14 +29,12 @@ namespace News_Technology_Web_Site.Controllers
                 myDb.Users.Add(user);
                 myDb.SaveChanges();
                 ViewBag.notError = true;
-                ViewBag.showError = false;
                 ViewBag.msg = "ثبت نام شما با موفقیت انجام شد.";
                 
             }
             catch (Exception)
             {
                 ViewBag.notError = false;
-                ViewBag.showError = true;
                 ViewBag.msg = "مشکلی در ثبت نام پیش آمد.";
             }
            

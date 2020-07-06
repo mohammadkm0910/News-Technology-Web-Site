@@ -104,7 +104,6 @@
     <Content Include="Design\css\pictures\ic_search.svg" />
     <Content Include="Design\css\style.css" />
     <Content Include="Design\fonts\vazir.svg" />
-    <Content Include="Design\js\toast.js" />
     <Content Include="Global.asax" />
     <Content Include="Design\icons\font-awesome.min.css" />
     <Content Include="Design\js\jquery.min.js" />
