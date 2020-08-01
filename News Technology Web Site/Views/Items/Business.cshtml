@@ -1,0 +1,131 @@
+﻿
+@{
+    ViewBag.Title = "کسب و کار";
+    Layout = "~/Views/Shared/_Title.cshtml";
+}
+
+<div class="container-slider">
+    <section class="slideshow">
+        <div class="auto-slider">
+            <p><label for="auto">نمایش اتوماتیک</label></p>
+            <input type="checkbox" id="auto" onclick="autoSlider()"/>
+        </div>
+        <div class="slider" style="display:block">
+            <img src="~/imgs/items/business/business1.jpg" alt="مورد توجه قرارنگرفتن رزومه" />
+            <h1>چرا رزومه شما مورد توجه شرکت‌ها قرار نمی‌گیرد؟</h1>
+            <div class="clear">
+                <a href="#">بیشتر</a>
+            </div>
+        </div>
+        <div class="slider">
+            <img src="~/imgs/items/business/business2.jpg" alt="نشانه های استعفا از کار" />
+            <h1>۷ نشانه اینکه باید از کارتان استعفا دهید</h1>
+            <div class="clear">
+                <a href="#">بیشتر</a>
+            </div>
+        </div>
+        <div class="slider">
+            <img src="~/imgs/items/business/business3.jpg" alt="عکسی نمادین از تقویت حافظه" />
+            <h1>با این ۵ روش حافظه خود را تقویت کنید</h1>
+            <div class="clear">
+                <a href="#">بیشتر</a>
+            </div>
+        </div>
+        <div class="slider">
+            <img src="~/imgs/items/business/business4.jpg" alt="عادات ناصحیح در کسب و کار ها" />
+            <h1>۶ عادت نادرستی که اعتبار و وجه شغلی شما را نابود می‌کند</h1>
+            <div class="clear">
+                <a href="#">بیشتر</a>
+            </div>
+        </div>
+        <div class="slider">
+            <img src="~/imgs/items/business/business5.jpg" alt="لوگوی اسنپ و تپسی" />
+            <h1>فرصت‌سوزی با ترمزهای داخلی؛ چرا اسنپ و تپ‌سی خارج از ایران فعال نیستند؟</h1>
+            <div class="clear">
+                <a href="#">بیشتر</a>
+            </div>
+        </div>
+        <span class="next" onclick="mySlider.next()"><i class="fa fa-angle-right"></i></span>
+        <span class="prev" onclick="mySlider.previous()"><i class="fa fa-angle-left"></i></span>
+    </section>
+</div>
+<div class="container-full">
+    <div class="sub-rows">
+        <div class="frame-row-img">
+            <img src="~/imgs/items/business/businessPost1.jpg" alt="از خرده مدیریت" />
+        </div>
+        <h5>
+            از خرده مدیریت تا نابلد بودن؛ ۱۲ ویژگی که رییس‌های بد و ناکارآمد دارند
+        </h5>
+        <div class="info-writing">
+            <span><i class="fa fa-user-circle-o"></i>نوشته </span>
+            <span>محمد کریمی</span>
+            <span>1399/5/9</span>
+        </div>
+        <div class="short-des">
+            هرقدر هم شغل خوبی داشته باشید یک رییس بد می‌تواند شیرینی آنرا در کامتان تلخ کند، اما اگر کارتان چندان خوشایند نباشد 
+            در کنار چنین رییسی غیرقابل تحمل خواهد بود. احتمالا شما هم شنیده‌اید 
+            که کارمندان معمولا نه به خاطر شرکت یا سازمان بلکه به خاطر نارضایتی از رییسشان استعفا می‌دهند. مشکل به همین جا...
+            <a href="#"><span data-link="ادامه مطالب">ادامه مطالب</span></a>
+        </div>
+    </div>
+    <div class="sub-rows">
+        <div class="frame-row-img">
+            <img src="~/imgs/items/business/businessPost2.jpg" alt="اطمینان از موفقیت در کسب و کار" />
+        </div>
+        <h5>
+            آیا آنقدرها که تصور می‌کنید در کارتان موفق هستید؟
+        </h5>
+        <div class="info-writing">
+            <span><i class="fa fa-user-circle-o"></i>نوشته </span>
+            <span>محمد کریمی</span>
+            <span>1399/5/9</span>
+        </div>
+        <div class="short-des">
+            آیا آنقدرها که تصور می‌کنید در کارتان موفق هستید؟
+            نوشته یونس مرادی  ۰  یکشنبه، ۰۵ مرداد ۱۳۹۹
+            بسیاری از ما خودمان در شغلی که داریم چیره دست و موفق می‌دانیم اما گاهی رکود و در جا زدن با موفقیت اشتباه گرفته می‌شود. این موفقیت پوشالی زمانی خودش را
+            نشان می‌دهد که درخواستتان برای افزایش حقوق یا ارتقای شغلی با بن بست 
+            مواجه می‌شود. دیروز به نشانه‌هایی پرداختیم که نشان می‌دهد بیش از...
+            <a href="#"><span data-link="ادامه مطالب">ادامه مطالب</span></a>
+        </div>
+    </div>
+    <div class="sub-rows">
+        <div class="frame-row-img">
+            <img src="~/imgs/items/business/businessPost3.jpg" alt="عکسی از سرعت اینترنت 5g در ایران" />
+        </div>
+        <h5>
+            کمال‌گرایی چگونه سد راه بازدهی شما می‌شود؟
+        </h5>
+        <div class="info-writing">
+            <span><i class="fa fa-user-circle-o"></i>نوشته </span>
+            <span>محمد کریمی</span>
+            <span>1399/5/9</span>
+        </div>
+        <div class="short-des">
+            بازدهی ارتباط چندانی با انجام کارهای بیشتر ندارد و بیشتر به اینکه چه کارهایی را انجام دهید، مربوط می‌شود.
+            اولویت‌بندی کارها یکی از راه‌های اساسی برای رسیدن به بازدهی بیشتر است اما اگر کمال‌گرایی به سه طریق می‌تواند 
+            اولویت بندی شما را مختل سازد.۱. تمایلی به کنار گذاشتن تصمیمات کم اهمیت ندارنددرباره کارهای کم اهمیت...             
+            <a href="#"><span data-link="ادامه مطالب">ادامه مطالب</span></a>
+        </div>
+    </div>
+    <div class="sub-rows">
+        <div class="frame-row-img">
+            <img src="~/imgs/items/business/businessPost4.jpg" alt="فراتر از موفقیت" />
+        </div>
+        <h5>
+            ۵ نشانه که مشخص می‌کند فراتر از تصورتان موفق هستید
+        </h5>
+        <div class="info-writing">
+            <span><i class="fa fa-user-circle-o"></i>نوشته </span>
+            <span>محمد کریمی</span>
+            <span>1399/5/9</span>
+        </div>
+        <div class="short-des">
+            موفقیت را نمی‌توان به راحتی توصیف کرد چرا که برای هر فردی متفاوت است. برای مثال شاید فردی به هیچ عنوان یک کسب و کار را
+            شروع نکند و بدنبال کار دیگری مانند خانه‌داری برود و در آن به اهداف خود دست پیدا کند و موفق محسوب شود. با این حال، نشانه‌هایی وجود دارند که...
+            <a href="#"><span data-link="ادامه مطالب">ادامه مطالب</span></a>
+        </div>
+    </div>
+</div>
+

@@ -96,7 +96,7 @@ namespace News_Technology_Web_Site.Controllers
             List<string> items = new List<string>();
             items.Add("اخبار و تکنولوژی");
             //زیر منو
-            items.Add("ایران و جهان");
+            items.Add("ایران");
             //پایان زیر منو
             items.Add("موبایل و تبلت");
             //زیر منو

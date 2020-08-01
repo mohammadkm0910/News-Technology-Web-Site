@@ -6,22 +6,26 @@ using System.Web.Mvc;
 
 namespace News_Technology_Web_Site.Controllers
 {
-    public class PostController : Controller
+    public class ItemsController : Controller
     {
-        // GET: Post
-        public ActionResult IBMstoppedFaceRecognitionTechnology()
+        // GET: Items
+        public ActionResult Samsung()
         {
             return View();
         }
-        public ActionResult MicrosoftRemoveWindows10FreshStart()
+        public ActionResult Huawei()
         {
             return View();
         }
-        public ActionResult RenderingsAndSpecificationsGalaxyTabS7()
+        public ActionResult App()
         {
             return View();
         }
-        public ActionResult DiscoverUnknownStructuresHiddenDeepUnderground()
+        public ActionResult Iran()
+        {
+            return View();
+        }
+        public ActionResult Business()
         {
             return View();
         }
